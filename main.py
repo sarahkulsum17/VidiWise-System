@@ -8,7 +8,7 @@ from pytube import YouTube
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders import DataFrameLoader
 from langchain_community.vectorstores import Chroma
-from langchain_community.chains import RetrievalQAWithSourcesChain
+from langchain_community.chains import RetrievalQA  # Check for the correct class
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.llms import OpenAI
 
