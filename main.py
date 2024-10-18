@@ -6,11 +6,11 @@ import os
 import pandas as pd
 from pytube import YouTube
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.document_loaders import DataFrameLoader
-from langchain.vectorstores import Chroma
-from langchain.chains import RetrievalQAWithSourcesChain
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.llms import OpenAI
+from langchain_community.document_loaders import DataFrameLoader
+from langchain_community.vectorstores import Chroma
+from langchain_community.chains import RetrievalQAWithSourcesChain
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.llms import OpenAI
 
 # Attempt to import whisper, install if missing
 try:
@@ -64,7 +64,11 @@ if st.button("Build Model"):
             device = "cuda" if torch.cuda.is_available() else "cpu"
 
             # Load the Whisper model
-            whisper_model = whisper.load_model("base", device=device)
+            try:
+                whisper_model = whisper.load_model("base", device=device)
+            except Exception as e:
+                st.error(f"Error loading Whisper model: {e}")
+                st.stop()
 
             # Extract and save audio
             video_URL = site
