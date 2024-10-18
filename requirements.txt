@@ -5,6 +5,6 @@ chromadb
 tiktoken
 langchain
 typing-inspect==0.8.0
-typing_extensions>=4.8.0  # Ensure compatibility with openai-whisper
+typing_extensions>=4.8.0
 pandas
 pysqlite3-binary
