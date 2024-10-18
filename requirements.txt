@@ -9,3 +9,4 @@ langchain
 pandas
 tiktoken
 pysqlite3-binary
+langchain-community
