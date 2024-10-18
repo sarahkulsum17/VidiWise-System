@@ -1,12 +1,12 @@
-streamlit
-pillow
-whisper
-torch
-pytube
-openai
-chromadb
-langchain
-pandas
-tiktoken
-pysqlite3-binary
-langchain-community
+streamlit>=1.10.0
+Pillow>=9.0.0
+whisper>=2022.8.31  # Specify version if known
+torch>=1.12.0  # Specify version based on your needs (CPU/GPU)
+pytube>=10.0.0
+openai>=0.27.0
+chromadb>=0.3.0
+langchain>=0.0.300  # Adjust based on the latest stable version
+pandas>=1.4.0
+tiktoken>=0.3.0
+pysqlite3-binary>=0.4.6
+langchain-community>=0.0.1  # Adjust based on the latest stable version
